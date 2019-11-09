@@ -51,13 +51,15 @@ const char* const MemoryPatternTableStrings[GAID_MAX] =
 MemorySearchEntry MemoryPatternTable[GAID_MAX] = 
 {
 	// GET_LOCAL_PLAYER :				C0 89 87 04 01 // OK (search for s90351)
-	MemorySearchEntry((u8*)"\xC0\x89\x87\x04\x01",		"xxxxx",	-0x5,	2, MemorySearchEntry::RT_REL_ADDRESS), 
+	MemorySearchEntry((u8*)"\xC0\x89\x87\x04\x01", "xxxxx", -0x5, 1, MemorySearchEntry::RT_REL_ADDRESS),
 
 	// INVENTORY_ACCESS_FUNCTION :		FF 5E 5D C2 14 // OK
-	MemorySearchEntry((u8*)"\xFF\x5E\x5D\xC2\x14",		"xxxxx",	-0xD,	2, MemorySearchEntry::RT_REL_ADDRESS), 
+	MemorySearchEntry((u8*)"\xFF\x5E\x5D\xC2\x14", "xxxxx", -0xD, 3, MemorySearchEntry::RT_REL_ADDRESS),
 
 	// TARGETING_COLLECTIONS_BASE :		68 50 06 00 00 // OK ++
-	MemorySearchEntry((u8*)"\x68\x50\x06\x00\x00",		"xxxxx",	0x30,	1, MemorySearchEntry::RT_ADDRESS), 
+	//MemorySearchEntry((u8*)"\x68\x50\x06\x00\x00",		"xxxxx",	0x30,	1, MemorySearchEntry::RT_ADDRESS), 
+	MemorySearchEntry((u8*)"\x55\x8b\xec\x83\xec\x00\x57\x8b\xf9\x83\xbf\x04\x01\x00\x00",        "xxxxx?xxxxxxxxx",    0x14,    1, MemorySearchEntry::RT_ADDRESS),
+
 
 	// WND_INTERFACE_BASE :				4E 24 83 B9 B0 // OK +++
 	MemorySearchEntry((u8*)"\x4E\x24\x83\xB9\xB0",		"xxxxx",	0x1F,	1, MemorySearchEntry::RT_ADDRESS), 
