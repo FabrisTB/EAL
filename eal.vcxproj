@@ -134,6 +134,7 @@
     <ClCompile Include="src\eal\utils.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="resource.h" />
     <ClInclude Include="src\eal\dllprotec.h" />
     <ClInclude Include="src\eal\libutils.h" />
     <ClInclude Include="src\eal\logger.h" />
@@ -143,6 +144,9 @@
     <ClInclude Include="src\eal\utils.h" />
     <ClInclude Include="src\eal\vector3.h" />
     <ClInclude Include="src\eal\version.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Resource.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
