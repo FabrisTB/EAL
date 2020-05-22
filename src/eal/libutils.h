@@ -119,9 +119,9 @@ struct Eudemon // size = 0x160 ?
 	u32 eudemonPtr;
 	u16 slotIdx;// 4
 	u16 unk1;
-	u8 unk2[0x12C];// 8
-	u32 currentPM;// 134
-	u16 chatAttempts;// 138
+	u8 unk2[0x11C];// 8
+	u32 currentPM;// 0x124
+	u16 chatAttempts;// 0x128
 	u16 unk3;	
 	u8 unk4[0x24];// 13C
 };
