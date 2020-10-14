@@ -51,7 +51,7 @@ END
 //
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 1,0,0,3
+ FILEVERSION 1,0,0,4
  PRODUCTVERSION 1,0,0,1
  FILEFLAGSMASK 0x3fL
 #ifdef _DEBUG
@@ -67,8 +67,8 @@ BEGIN
     BEGIN
         BLOCK "040704b0"
         BEGIN
-            VALUE "FileDescription", "EAL for AK, Patch 66+67 - NyanNyan"
-            VALUE "FileVersion", "1.0.0.3"
+            VALUE "FileDescription", "EAL for AK, Patch 68 - Star Caller"
+            VALUE "FileVersion", "1.0.0.4"
             VALUE "InternalName", "eal.dll"
             VALUE "LegalCopyright", "Copyright (C) 2020 AlainProvist "
             VALUE "OriginalFilename", "eal.dll"
