@@ -183,7 +183,11 @@ unsigned int __stdcall HookThread(void* pArguments)
 	}
 	else
 	{
-		MessageBox(NULL, "Can't retrieve addresses from patterns!", "Error", MB_OK);
+		std::string msg = "Can't retrieve addresses from patterns! v";
+		std::string text = vFileVersionString;
+		msg += text;
+		MessageBox(NULL, msg.c_str(), "Error", MB_OK);
+		//MessageBox(NULL, "Can't retrieve addresses from patterns!", "Error", MB_OK);
 	}
 
 	{

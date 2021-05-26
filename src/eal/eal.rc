@@ -32,8 +32,7 @@ END
 
 2 TEXTINCLUDE 
 BEGIN
-    "#include ""winres.h""\r\n"
-    "\0"
+    "#include ""winres.h""\0"
 END
 
 3 TEXTINCLUDE 
@@ -49,10 +48,10 @@ END
 //
 // Version
 //
-
+#include "version.h"
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 1,0,0,5
- PRODUCTVERSION 1,0,0,1
+ FILEVERSION vFileVersion
+ PRODUCTVERSION vProductVersion
  FILEFLAGSMASK 0x3fL
 #ifdef _DEBUG
  FILEFLAGS 0x1L
@@ -67,13 +66,13 @@ BEGIN
     BEGIN
         BLOCK "040704b0"
         BEGIN
-            VALUE "FileDescription", "EAL for AK, Patch 71 + 72"
-            VALUE "FileVersion", "1.0.0.5"
-            VALUE "InternalName", "eal.dll"
-            VALUE "LegalCopyright", "Copyright (C) 2020 AlainProvist "
-            VALUE "OriginalFilename", "eal.dll"
-            VALUE "ProductName", "EAL"
-            VALUE "ProductVersion", "1.0.0.1"
+            VALUE "FileDescription", vFileDescription
+            VALUE "FileVersion", vFileVersionString
+            VALUE "InternalName", vInternalName
+            VALUE "LegalCopyright", vLegalCopyright
+            VALUE "OriginalFilename", vOriginalFilename
+            VALUE "ProductName", vProductName
+            VALUE "ProductVersion", vProductVersionString
         END
     END
     BLOCK "VarFileInfo"
@@ -81,7 +80,6 @@ BEGIN
         VALUE "Translation", 0x407, 1200
     END
 END
-
 #endif    // Deutsch (Deutschland) resources
 /////////////////////////////////////////////////////////////////////////////
 
