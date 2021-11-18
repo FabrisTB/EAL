@@ -60,8 +60,8 @@ struct EntityInfo
 
 struct MainPlayerInfo : public EntityInfo
 {
-	u8 unk[0x160]; // 0x468
-	void* inventoryPtr; // 0x5C8
+	u8 unk[0x164]; // 0x468
+	void* inventoryPtr; // 0x5Cc
 };
 
 struct Entity
