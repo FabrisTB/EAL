@@ -16,8 +16,8 @@
 */
 
 #define vFileDescription "EAL - Eidolon Auto Link for Aura Kingdom Official Server"
-#define vFileVersion 1,0,0,7
-#define vFileVersionString "1.0.0.7"
+#define vFileVersion 1,0,0,8
+#define vFileVersionString "1.0.0.8"
 #define vInternalName "EAL.dll"
 #define vLegalCopyright "Copyright (C) 2021 AlainProvist"
 #define vOriginalFilename "EAL.dll"
