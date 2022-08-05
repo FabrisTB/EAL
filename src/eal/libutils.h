@@ -52,8 +52,8 @@ struct EntityInfo
 	u32 currentHP;//8
 	u32 cash;//C
 	u32 level;//10
-	u8 unk3[0x118];//14
-	std::string charName; // 0x12C
+	u8 unk3[0x120];//14
+	std::string charName; // 0x134
 	u8 unk4[0x320];// 0x148
 };
 
