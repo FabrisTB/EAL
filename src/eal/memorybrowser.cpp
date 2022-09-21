@@ -54,12 +54,10 @@ MemorySearchEntry MemoryPatternTable[GAID_MAX] =
 	MemorySearchEntry((u8*)"\xC0\x89\x87\x00\x00\x00\x00\x75\x07",		"xxx????xx",	-0x5,	1, MemorySearchEntry::RT_REL_ADDRESS),
 
 	// INVENTORY_ACCESS_FUNCTION :		FF 5E 5D C2 14 // OK
-	MemorySearchEntry((u8*)"\xFF\x5E\x5D\xC2\x14",		"xxxxx",	-0xD,	3, MemorySearchEntry::RT_REL_ADDRESS),
+	MemorySearchEntry((u8*)"\xFF\x5E\x5D\xC2\x14",		"xxxxx",	-0xD,	2, MemorySearchEntry::RT_REL_ADDRESS),
 
-	// TARGETING_COLLECTIONS_BASE :		68 50 06 00 00 // OK ++
-	//MemorySearchEntry((u8*)"\x68\x50\x06\x00\x00",		"xxxxx",	0x30,	1, MemorySearchEntry::RT_ADDRESS), 
+	// TARGETING_COLLECTIONS_BASE :		68 60 06 00 00 // OK ++
 	MemorySearchEntry((u8*)"\x68\x60\x06\x00\x00",		"xxxxx",	0x30,	1, MemorySearchEntry::RT_ADDRESS),
-
 
 	// WND_INTERFACE_BASE :				4E 24 83 B9 B0 // OK +++
 	MemorySearchEntry((u8*)"\x4E\x24\x83\xB9\x00\x00\x00\x00\x00",		"xxxx?????",	0x1F,	1, MemorySearchEntry::RT_ADDRESS),
