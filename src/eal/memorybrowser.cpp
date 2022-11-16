@@ -62,8 +62,8 @@ MemorySearchEntry MemoryPatternTable[GAID_MAX] =
 	// WND_INTERFACE_BASE :				4E 24 83 B9 B0 // OK +++
 	MemorySearchEntry((u8*)"\x4E\x24\x83\xB9\x00\x00\x00\x00\x00",		"xxxx?????",	0x1F,	1, MemorySearchEntry::RT_ADDRESS),
 
-	// EUDEMON_GETEUDEMON_FUNCTION :	DB 0F 84 5E 01 // OK (search for call of SET_NEAREST_TARGET_FUNCTION)
-	MemorySearchEntry((u8*)"\xDB\x0F\x84\x00\x00\x00\x00\x6A\x12",		"xxx????xx",	-0x7,	1, MemorySearchEntry::RT_REL_ADDRESS),
+	// EUDEMON_GETEUDEMON_FUNCTION :	DB 0F 84 5E 01 -> F6 0F 84 28 01 // OK (search for call of SET_NEAREST_TARGET_FUNCTION)
+	MemorySearchEntry((u8*)"\xF6\x0F\x84\x28\x01",		"xxxxx",	-0x7,	2, MemorySearchEntry::RT_REL_ADDRESS),
 	// EUDEMON_SENDCOMMAND_FUNCTION :	6A 04 6A 00 52 // OK +++
 	MemorySearchEntry((u8*)"\x6A\x04\x6A\x00\x52",		"xxxxx",	0x6,	1, MemorySearchEntry::RT_REL_ADDRESS),
 	// EUDEMON_SELECT_FUNCTION :		FB FF 56 8B F1 // OK
