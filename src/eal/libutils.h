@@ -60,8 +60,8 @@ struct EntityInfo
 
 struct MainPlayerInfo : public EntityInfo
 {
-	u8 unk[0x164]; // 0x468
-	void* inventoryPtr; // 0x5Cc
+	u8 unk[0x1A4]; // 0x470
+	void* inventoryPtr; // 0x614
 };
 
 struct Entity
@@ -119,10 +119,10 @@ struct Eudemon // size = 0x160 ?
 	u32 eudemonPtr;
 	u16 slotIdx;// 4
 	u16 unk1;
-	u8 unk2[0x11C];// 8
-	u32 currentPM;// 0x124
-	u16 chatAttempts;// 0x128
-	u16 unk3;	
+	u8 unk2[0x12C];// 8
+	u32 currentPM;// 0x134
+	u16 chatAttempts;// 0x138
+	u16 unk3;
 	u8 unk4[0x24];// 13C
 };
 

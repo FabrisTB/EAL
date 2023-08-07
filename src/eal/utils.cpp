@@ -151,7 +151,6 @@ InventoryBag* GetInventoryBag( u32 bagId, u32 inventoryType/* = IT_BackPack*/, u
 	u32 thisPtr = GetInventoryAccessPtr();
 	if(!thisPtr)
 		return NULL;
-
 	InventoryBag* bag = NULL;
 	__asm
 	{
@@ -162,6 +161,11 @@ InventoryBag* GetInventoryBag( u32 bagId, u32 inventoryType/* = IT_BackPack*/, u
 		call lpFunction;
 		mov bag, eax;
 	}
+	
+	if (!bag)
+		return NULL;
+
+	return bag;
 }
 
 u32 GetInventorySize()
@@ -338,16 +342,26 @@ void UpdateEudemons(float dt)
 				{
 					if(HasEudemonGift(i))
 					{
-						bool isInventoryFull = false;
-						std::vector<u32> emptySlots;
-						GetEmptySlots(emptySlots);
-						isInventoryFull = emptySlots.empty();
-
-						if(isInventoryFull)
-							continue;
-						else
-							if(TryEudemonAction(i, EA_RETRIEVE))
+						if (false)//Without Inventory Check = set True
+						{
+							if (TryEudemonAction(i, EA_RETRIEVE))
 								break;
+						}
+						else
+						{
+							GetInventorySize();
+							bool isInventoryFull = false;
+							std::vector<u32> emptySlots;
+							GetEmptySlots(emptySlots);
+							isInventoryFull = emptySlots.empty();
+
+							if (isInventoryFull)
+								continue;
+							else
+								if (TryEudemonAction(i, EA_RETRIEVE))
+									break;
+						}
+
 					}
 					if(!TryEudemonAction(i, EA_TALK))
 					{
