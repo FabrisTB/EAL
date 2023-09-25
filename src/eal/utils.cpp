@@ -118,7 +118,7 @@ EntityCollection* GetEntityCollection(EntityCollectionType type, u32 lpBase/* = 
 		addr = ThreadSafeReadAddress(addr, 0);
 	if (!addr)
 		return NULL;
-	addr = (size_t*)((size_t)addr + 0x51C + type * sizeof(EntityCollection));
+	addr = (size_t*)((size_t)addr + 0x524 + type * sizeof(EntityCollection));
 
 	return (EntityCollection*)addr;
 }
@@ -128,7 +128,7 @@ bool IsInGame()
 	CurrentMap* curMap = GetCurrentMap();
 	if (curMap && curMap->mapID > 0 && curMap->mapID != 0x63/*char selection*/)
 	{
-		EntityCollection* ec = GetEntityCollection(ECT_Chara);
+		EntityCollection* ec = GetEntityCollection(ECT_CharaCollection);
 		if (ec && ec->container)
 		{
 			Entity* locPlayer = GetLocalPlayer();

@@ -58,7 +58,7 @@ struct Collection
 };
 typedef Collection<EntityElement> EntityCollection;
 
-enum EntityCollectionType { ECT_Chara, ECT_Effect, ECT_Duel };
+enum EntityCollectionType { ECT_CharaCollection, ECT_EffectColletion, ECT_DuelCollection };
 
 struct CurrentMap
 {
