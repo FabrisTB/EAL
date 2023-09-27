@@ -118,7 +118,7 @@ EntityCollection* GetEntityCollection(EntityCollectionType type, u32 lpBase/* = 
 		addr = ThreadSafeReadAddress(addr, 0);
 	if (!addr)
 		return NULL;
-	addr = (size_t*)((size_t)addr + 0x524 + type * sizeof(EntityCollection));
+	addr = (size_t*)((size_t)addr + 0x520 + type * sizeof(EntityCollection));
 
 	return (EntityCollection*)addr;
 }
