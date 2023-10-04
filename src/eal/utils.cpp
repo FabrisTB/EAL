@@ -142,6 +142,8 @@ bool IsInGame()
 u32 GetInventoryAccessPtr()
 {
 	MainPlayerInfo* info = GetLocalPlayer()? (MainPlayerInfo*)GetLocalPlayer()->info : NULL;
+	if (!info->inventoryPtr)
+		return NULL;
 	void* res = info? info->inventoryPtr : NULL;
 	return (u32)res;
 }
@@ -235,7 +237,7 @@ bool TryEudemonAction(int slotID, EudemonAction action, u32 fct/* = EUDEMON_SEND
 	switch(action)
 	{
 	case EA_TALK:
-		if(eudemon->chatAttempts == 0)
+		if(eudemon->chatAttempts == 0 || eudemon->currentPM == 100)
 			return false;
 		LogMessage(Eidolons, StringFormat("Talking to eidolon at slot %d.", slotID + 1));
 		arg1 = bestMessageIDs[rand()%3];
