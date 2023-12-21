@@ -237,7 +237,7 @@ bool TryEudemonAction(int slotID, EudemonAction action, u32 fct/* = EUDEMON_SEND
 	switch(action)
 	{
 	case EA_TALK:
-		if(eudemon->chatAttempts == 0 || eudemon->currentPM == 100)
+		if(eudemon->chatAttempts == 0 || eudemon->currentPM == 99)
 			return false;
 		LogMessage(Eidolons, StringFormat("Talking to eidolon at slot %d.", slotID + 1));
 		arg1 = bestMessageIDs[rand()%3];
