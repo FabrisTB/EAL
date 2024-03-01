@@ -79,7 +79,8 @@ MemorySearchEntry MemoryPatternTable[GAID_MAX] =
 	// DETOUR_MAIN_LOOP_OFFSET :		FF 80 BE 08 01 // OK
 	MemorySearchEntry((u8*)"\xFF\x80\xBE\x00\x00\x00\x00\x00\x74\x1D\xE8\x00\x00\x00\x00\xE8\x00\x00\x00\x00\x8B\x0D\x00\x00\x00\x00\x8B\x11\x8B\x02\xFF\xD0\x8B\xCE\xE8\x00\x00\x00\x00",		"xxx?????xxx????x????xx????xxxxxxxxx????",	0x1,	1, MemorySearchEntry::RT_LOCATION, true, (u8*)"\x80\xBE\x08\x01\x00\x00\x00"),
 	// DETOUR_CRASH_HANDLER_OFFSET :	4D EC 51 6A 05 // OK (TopLevelExceptionFilter)
-	MemorySearchEntry((u8*)"\x4D\xEC\x51\x6A\x05\x68\x00\x00\x00\x00\x50\xFF\xD3\x50\xFF\x15\x00\x00\x00\x00\x89\x3D\x00\x00\x00\x00",		"xxxxxx????xxxxxx????xx????",	-0x56,	1, MemorySearchEntry::RT_LOCATION, true, (u8*)"\x64\xA1\x00\x00\x00"),
+	MemorySearchEntry((u8*)"\x4D\xF0\x51\x6A\x05",		"xxxxx",	-0x56,	1, MemorySearchEntry::RT_LOCATION, true, (u8*)"\x64\xA1\x00\x00\x00"),
+	
 };
 
 FILETIME DateTimeCreation;
