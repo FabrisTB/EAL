@@ -257,11 +257,12 @@ bool TryEudemonAction(int slotID, EudemonAction action, u32 fct/* = EUDEMON_SEND
 		mov eax, eudemon;
 		mov eax, [eax];// eudemon ID
 		push 0;
+		push 0;// unknown??
 		push action;
 		push arg1;
 		push eax;
 		call fct;
-		add esp, 10h;
+		add esp, 14h;
 	}
 
 	return true;
